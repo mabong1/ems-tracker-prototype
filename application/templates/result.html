@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  {% for parcel in data %}
+  <div class="item card parcel-card">
+    <table>
+      <tbody>
+        {% for field in parcel['overview'] %}
+        <tr>
+          <td class="strong">{{ field[0] }}:</td>
+          <td>{{ field[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div>
+      <h4>배송 진행상황</h4>
+      <ul>
+        {% for row in parcel['detail']['rows'] %}
+        <li>{{ row[0] }} - {{ row[1] }} - {{ row[2] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+  <a href="/" class="btn btn-outline-primary btn-back-home">뒤로가기</a>
+</div>
+{% endblock %}

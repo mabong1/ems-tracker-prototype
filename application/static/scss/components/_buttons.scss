@@ -1,0 +1,31 @@
+.btn {
+  padding: 1rem 0;
+  border: none;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: white;
+  color: $secondary;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $secondary;
+    transition: color .2s linear;
+    transition: background-color .2s linear;
+  }
+}
+
+.btn-back-home {
+  text-align: center;
+  width: 80%;
+  justify-self: center;
+  padding: 1rem;
+}
